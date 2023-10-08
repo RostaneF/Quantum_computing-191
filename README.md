@@ -21,7 +21,7 @@ This repository is dedicated to exploring and understanding the fascinating worl
 ### Installation
 
 1. Clone the repository:
-   ````
+   ```
    git clone https://github.com/RostaneF/Quantum_computing-191.git
    ```
    
