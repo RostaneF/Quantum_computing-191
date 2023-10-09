@@ -68,13 +68,13 @@ call_price_lsm, exec_time_lsm = pricer_example.LSM(order=3)
 
 The parameters used for the option pricing calculations are as follows:
 
-- \( S_0 = 100 \): Initial price of the underlying asset.
-- \( K = 110 \): Strike price of the option.
-- \( r = 0.05 \): Risk-free interest rate.
-- \( \sigma = 0.3 \): Volatility of the underlying asset.
-- \( T = 2.221918 \): Time until the option's expiration.
-- \( \text{num\_steps} = 5000 \): Number of steps/timing in numerical methods.
-- \( \text{O\_type} \): Option type (Call or Put).
+- `S0 = 100`: Initial price of the underlying asset.
+- `K = 110`: Strike price of the option.
+- `r = 0.05`: Risk-free interest rate.
+- `σ = 0.3`: Volatility of the underlying asset.
+- `T = 2.221918`: Time until the option's expiration.
+- `num_steps = 5000`: Number of steps/timing in numerical methods.
+- `O_type`: Option type (Call or Put).
 
 ### Analysis of Results
 
