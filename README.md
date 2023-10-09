@@ -64,6 +64,60 @@ call_price_lsm, exec_time_lsm = pricer_example.LSM(order=3)
 - `LSM(paths=10000, order=2)`: Prices options using the LSM method.
 - `Neural_network()`: Prices options using a neural network model.
 
+## Interpretation of Results
+
+The parameters used for the option pricing calculations are as follows:
+
+- \( S_0 = 100 \): Initial price of the underlying asset.
+- \( K = 110 \): Strike price of the option.
+- \( r = 0.05 \): Risk-free interest rate.
+- \( \sigma = 0.3 \): Volatility of the underlying asset.
+- \( T = 2.221918 \): Time until the option's expiration.
+- \( \text{num\_steps} = 5000 \): Number of steps/timing in numerical methods.
+- \( \text{O\_type} \): Option type (Call or Put).
+
+### Analysis of Results
+
+1. **CRR_Pricer:**
+   - Call: 18.35
+   - Put: 16.78
+
+2. **American Pricer:**
+   - Call: 18.35
+   - Put: 18.87
+
+3. **PDE Pricer:**
+   - With "Spsolve":
+     - Call: 18.35, Time: 20.71s
+     - Put: 18.87, Time: 20.34s
+   - With "Splu":
+     - Call: 18.35, Time: 2.99s
+     - Put: 18.87, Time: 2.66s
+
+4. **Longstaff-Schwartz Pricer:**
+   - Call: 18.78, Time: 27.52s
+   - Put: 19.04, Time: 27.22s
+
+### Relevance and Comparison
+
+- **CRR_Pricer vs. American Pricer:**
+  The Call option prices are identical, while there is a notable difference for the Put options. This is due to the nature of American options, which can be exercised at any time before expiration, potentially increasing their value compared to European options (typically modeled by CRR).
+
+- **PDE Pricer (Spsolve vs. Splu):**
+  The prices are identical, but the execution time with "Splu" is significantly lower, indicating superior computational efficiency.
+
+- **Longstaff-Schwartz Pricer:**
+  The prices are slightly higher than the other methods, attributed to the regression method used to estimate the continuation value in the algorithm. The execution time is also longer, which can be a drawback for real-time calculations or applications requiring numerous simulations.
+
+### Practical Implications
+
+- **Computational Efficiency:**
+  If execution time is a key consideration (e.g., in algorithmic trading), "Splu" appears to be the most efficient PDE solver among those tested.
+
+- **Pricing Accuracy:**
+  The consistency of prices across different methods is a positive indicator, but understanding the nuances and underlying assumptions of each method is crucial to select the most suitable one in a given context.
+
+
 ### Note
 
 Ensure to install all necessary Python libraries and handle potential exceptions for robust application. The class is designed to handle various edge cases and provides a comprehensive toolkit for option pricing using different methods.
