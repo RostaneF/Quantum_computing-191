@@ -8,7 +8,7 @@ This repository is dedicated to exploring and understanding the fascinating worl
 
 - `Code.py`: A Python script that contains code related to Quantum Computing algorithms and implementations.
 - `Notebook_QuantumComputing.ipynb`: A Jupyter Notebook that provides an interactive environment to run and explore Quantum Computing code and theories.
-- `Quantum_Computing_191.pdf`: A document that potentially contains theoretical information, explanations, or research findings related to Quantum Computing.
+- `Quantum_Computing_191.pdf`: A research and popularization document that provides theoretical information, explanations, and research findings related to Quantum Computing.
 
 ## Getting Started
 
@@ -36,6 +36,9 @@ This repository is dedicated to exploring and understanding the fascinating worl
 - Launch Jupyter Notebook and explore `Notebook_QuantumComputing.ipynb` for interactive learning and experimentation.
 - Read through `Quantum_Computing_191.pdf` for theoretical insights and additional information.
 
+## Collaboration Note
+
+This work has been conducted in collaboration with a team of quant traders from BNY Mellon, London, aiming to explore, understand, and potentially leverage the capabilities of Quantum Computing in the realm of trading and financial analysis.
 
 ## Contact
 
