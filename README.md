@@ -1,6 +1,7 @@
 # Quantum Computing 191- Research project X Bny Mellon
 
 Forword to thank my project referent : Léa Beudin
+
 A heartfelt thank you for your indispensable role as our project referent. Your constant availability, attentiveness, and support have been a fundamental pillar throughout our journey. Your commitment has not only facilitated the realization of the project but also created a collaborative and positive environment for the entire team.
 
 
